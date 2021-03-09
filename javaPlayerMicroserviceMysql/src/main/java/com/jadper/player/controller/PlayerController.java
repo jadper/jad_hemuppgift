@@ -33,8 +33,9 @@ public class PlayerController {
     }
 
     @PostMapping("/player")
-    public void add(@RequestBody Player player) {        
+    public ResponseEntity<?> add(@RequestBody Player player) {        
         playerService.savePlayer(player);
+        return new ResponseEntity<>(HttpStatus.CREATED);
     }
 
     @PutMapping("/player/{id}") // replace player

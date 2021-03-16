@@ -9,7 +9,7 @@ public class Player {
     @GeneratedValue(strategy = GenerationType.IDENTITY)    
     private int id;
     private String name;
-    private int jersy;
+    private int jersey;
     private int age;
     private String born;
 
@@ -34,12 +34,12 @@ public class Player {
         this.name = name;
     }
 
-    public void setJersy(int jersy) {
-         this.jersy = jersy;
+    public void setJersey(int jersey) {
+         this.jersey = jersey;
     }
 
-    public int getJersy() {
-        return this.jersy;
+    public int getJersey() {
+        return this.jersey;
     }
 
     public void setAge(int age) {

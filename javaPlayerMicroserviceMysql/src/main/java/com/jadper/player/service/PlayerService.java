@@ -42,7 +42,7 @@ public class PlayerService {
             p.setName(updates.get("name").toString() );    
         }
         if (updates.containsKey("jersy")){
-            p.setJersy(Integer.parseInt(updates.get("jersy").toString()));
+            p.setJersey(Integer.parseInt(updates.get("jersy").toString()));
         }
         if (updates.containsKey("age")){
             p.setAge(Integer.parseInt(updates.get("age").toString()));

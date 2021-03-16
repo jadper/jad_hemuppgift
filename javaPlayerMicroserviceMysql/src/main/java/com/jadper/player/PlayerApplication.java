@@ -88,7 +88,7 @@ public class PlayerApplication  implements CommandLineRunner {
 		System.out.println("---------------------------------");
   		System.out.println("Player ID: "+p.getId());			  
   		System.out.println("Player name: " + p.getName());
-  		System.out.println("Player Jersy No: "+ p.getJersy() );
+  		System.out.println("Player Jersy No: "+ p.getJersey() );
   		System.out.println("Player Age: "+ p.getAge() );
   		System.out.println("Player Born: "+ p.getBorn() );
 	}
@@ -112,14 +112,14 @@ public class PlayerApplication  implements CommandLineRunner {
 			p = playerRepository.findById(playerId).get();	
 			System.out.print("Player name ("+p.getName()+"):");
 			playerName = System.console().readLine();
-			System.out.print("Jersy number ("+p.getJersy()+"):");
+			System.out.print("Jersy number ("+p.getJersey()+"):");
 			playerJersyNo = Integer.parseInt(System.console().readLine());
 			System.out.print("Player age ("+p.getAge()+"):");
 			playerAge = Integer.parseInt(System.console().readLine());
 			System.out.print("Player born ("+p.getBorn()+"):");
 			playerBorn = System.console().readLine();
 			p.setName(playerName);
-			p.setJersy(playerJersyNo);
+			p.setJersey(playerJersyNo);
 			p.setAge(playerAge);
 			p.setBorn(playerBorn);
 		
@@ -144,7 +144,7 @@ public class PlayerApplication  implements CommandLineRunner {
 
 		p = new Player();
 		p.setName(playerName);
-		p.setJersy(playerJersyNo);
+		p.setJersey(playerJersyNo);
 		p.setAge(playerAge);
 		p.setBorn(playerBorn);
 		playerRepository.save(p);
